@@ -22,9 +22,9 @@ app.factory('movies', [function() {
     supportedResolution: [480, 720,1080],
     posterImage: "https://upload.wikimedia.org/wikipedia/en/1/1c/WhenHarryMetSallyPoster.jpg",
     shortDescription: "The story follows the title characters from the time they meet just before sharing a cross-country drive, through twelve years or so of chance encounters in New York City.",
-    isBlockbuster: false   
+    isBlockbuster: false
   }];
-  
+
   var getMovies = function(){
     return movies;
   }
@@ -32,9 +32,9 @@ app.factory('movies', [function() {
   var removeMovie = function (index) {
     movies.splice(index, 1);
   };
-  
+
   return {
     getMovies: getMovies,
     removeMovie: removeMovie
-  } 
+  }
 }]);

@@ -1,0 +1,18 @@
+<div class="movie-item">
+  <div class="movie-image-container">
+    <img class="movie-image" ng-src="{{movie.posterImage}}" alt="film image" ng-click="clickingFunc()" />
+      <div ng-show="isDeleting" class="movie-delete-icon glyphicon glyphicon-minus-sign delete-icon"> </div>
+      </div>
+      <div class="movie-name">{{movie.name | uppercase}}</div>
+      <div class="movie-sub-info">
+        <div class="movie-year">{{movie.year}}</div>
+      <div class="movie-resolutions">
+        <span ng-repeat="res in movie.supportedResolution track by $index">
+        {{res}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+<!-- NOTE: to activate clicking func, we can also do it from here in img (instead of the directive) -->
+<!-- ng-click="clickingFunc($index)" -->
